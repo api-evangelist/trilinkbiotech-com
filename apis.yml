@@ -1,25 +1,69 @@
 aid: trilinkbiotech-com
+
 name: Molecular Assemblies
-description: 'Molecular Assemblies is a company surfaced via the API Evangelist harvest backlog (source:
-  vc-portfolio; backed by dcvc) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Molecular Assemblies, now part of TriLink BioTechnologies, provides synthetic DNA using Fully Enzymatic Synthesis (FES) technology. It produces long, pure single‑stranded oligonucleotides up to 400 bases for applications in therapeutics, vaccines, immunotherapy, agriculture, and nanotechnology, delivering orders without post‑synthesis purification.'
+
 url: https://raw.githubusercontent.com/api-evangelist/trilinkbiotech-com/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-24'
+
 modified: '2026-10-24'
+
 tags:
-- Company
-apis: []
+- DNA synthesis
+- synthetic DNA
+- therapeutics
+- vaccines
+- agriculture
+- nanotechnology
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- dcvc
+
 common:
+- type: Hosts
+  url: hosts/trilinkbiotech-com-hosts.yml
+- type: Vendors
+  url: vendors/trilinkbiotech-com-vendors.yml
+- type: DomainSecurity
+  url: security/trilinkbiotech-com-domain-security.yml
 - type: Website
   url: https://go.trilinkbiotech.com/molecular-assemblies
+
+apis: []
+
+x-backed-by:
+- dcvc
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-24'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://go.trilinkbiotech.com/api/mcp
+    status: 401
+  - url: https://go.trilinkbiotech.com/molecular-assemblies
+    status: 200
+x-enrichment:
+  date: '2026-10-24'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
